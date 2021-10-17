@@ -1,0 +1,6 @@
+import pickle
+# open a file, where you ant to store the data
+file = open("random_forest_regression_model.pkl", 'wb')
+
+# dump information to that file
+pickle.dump(rf_random, file)

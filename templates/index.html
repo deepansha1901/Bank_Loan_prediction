@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style>
+   .myDiv {
+   border: 5px outset red;
+   background-color: lightblue;
+   text-align: center;
+   }
+   .myDiv2 {
+   border: 5px outset green;
+   background-color: lightblue;
+   text-align: center;
+   }
+   </style>
+   <title>Bank Loan Approval Prediction</title>
+  </head>
+  <body>
+    <div class="myDiv2">
+    <p style="color:blue;">{{ prediction_text }}</p>
+    </div>
+    <br>
+    <div class="myDiv">
+      <form action="{{ url_for('predict')}}" method="post">
+        <h1>Bank Loan Approval Prediction</h1>
+        <h4>Gender</h4>
+        <select name="Gender">
+          <option value=""></option>
+          <option value="0">Male</option>
+          <option value="1">Female</option>
+        </select>
+        <h4>Married</h4>
+        <select name="Married">
+          <option value=""></option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <h4>Number of dependents</h4>
+         <select name="dependents">
+            <option value="" selected></option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3+</option>
+          </select>
+        <h4>Education</h4>
+          <select name="Education">
+            <option value="" selected></option>
+            <option value="1">Graduate</option>
+            <option value="0">Not Graduate</option>
+          </select>
+        <h4>Self Employed</h4>
+          <select name="Self_Employed">
+          <option value=""></option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <h4>Applicant income</h4>
+        <input name="ApplicantIncome" type="number "/>
+        <h4>Coapplicant income</h4>
+        <input name="CoapplicantIncome" type="number "/>
+        <h4>Loan Amount in lakhs</h4>
+        <input name="Loan_Amount" type="number "/>
+        <h4>Credit History</h4>
+         <select name="Credit_History">
+          <option value=""></option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+         </select>
+        
+       <h4>Property Area</h4>
+         <select name="Property_Area">
+            <option value="" selected></option>
+            <option value="0">Rural</option>
+            <option value="1">SemiUrban</option>
+            <option value="2">Urban</option>
+          </select>
+        <br>
+        <br>
+        <br>
+        <div class="btn-block">
+          <button type="submit">Predict Approval</button>
+        </div>
+        
+      </form>
+      
+      
+    </div>
+   <br>
+   <br>
+   
+  </body>
+</html>
